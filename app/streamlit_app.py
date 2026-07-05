@@ -23,10 +23,11 @@ st.set_page_config(
 # -------------------------------------------------------
 # PATH & KONSTANTA
 # -------------------------------------------------------
-CSV_PATH = "forex_ml_project/data/historical_rates.csv"
-MODEL_PATH = "forex_ml_project/models/linear_regression_model"
-FEATURE_CONFIG_PATH = "forex_ml_project/models/feature_config.json"
+BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
+CSV_PATH = os.path.join(BASE_DIR, "data", "historical_rates.csv")
+MODEL_PATH = os.path.join(BASE_DIR, "models", "linear_regression_model")
+FEATURE_CONFIG_PATH = os.path.join(BASE_DIR, "models", "feature_config.json")
 
 # -------------------------------------------------------
 # CACHING: memuat Spark session & model HANYA SEKALI
